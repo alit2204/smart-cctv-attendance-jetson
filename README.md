@@ -6,7 +6,7 @@ The implementation will be done on a resource-constrained edge device platform, 
 
 ---
 
-## 🛠️ Setup Instructions
+## Setup Instructions
 
 This system is built for deployment on an edge device.
 
@@ -17,7 +17,7 @@ This system is built for deployment on an edge device.
 
 ---
 
-## 📂 Folder Structure
+## Folder Structure
 
 The repository maintains the required organized structure for project elements:
 
@@ -28,7 +28,7 @@ The repository maintains the required organized structure for project elements:
 
 ---
 
-## 🧑‍💻 Team Roles
+## Team Roles
 
 | Member | CMS | Role | Primary Responsibilities |
 | :--- | :--- | :--- | :--- |
