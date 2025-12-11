@@ -1,0 +1,78 @@
+# Smart CCTV Attendance System Configuration
+
+# Model Paths
+models:
+  centerface: "models/centerface.onnx"
+  mobilefacenet: "models/mobilefacenet.pth"
+  ssd_mobilenet: "models/ssd_mobilenet.onnx"
+
+# Database Paths
+database:
+  students_csv: "database/students.csv"
+  embeddings_pkl: "database/embeddings.pkl"
+  attendance_log: "database/attendance_log.csv"
+  
+# Student Photos Directory
+student_photos_dir: "student_photos"
+
+# Camera Settings
+camera:
+  source: 0  # 0 for webcam, or RTSP URL for IP camera
+  width: 640
+  height: 480
+  fps: 30
+
+# Face Detection Settings (CenterFace)
+face_detection:
+  confidence_threshold: 0.5
+  nms_threshold: 0.3
+  input_size: [640, 480]
+
+# Face Recognition Settings (MobileFaceNet)
+face_recognition:
+  embedding_size: 128
+  similarity_threshold: 0.6  # Cosine similarity (0.5-0.7 recommended)
+  face_size: [112, 112]  # MobileFaceNet expects 112x112
+
+# Person Detection Settings (SSD MobileNet)
+person_detection:
+  confidence_threshold: 0.4
+  nms_threshold: 0.3
+  person_class_id: 1  # COCO dataset: person = 1
+
+# Tracking Settings
+tracking:
+  max_disappeared: 30  # Max frames to keep disappeared object
+  max_distance: 50  # Max distance for centroid matching
+
+# Attendance Settings (AttenFace Style)
+attendance:
+  snapshot_interval: 600  # 10 minutes in seconds (600s)
+  min_snapshots_for_presence: 4  # Must be in 4+ snapshots for 60-min class
+  class_duration: 3600  # 60 minutes in seconds
+
+# Tailgating Settings
+tailgating:
+  entry_line_position: 0.5  # Virtual line at 50% of frame width
+  entry_zone_buffer: 50  # Pixels around entry line
+  alert_duration: 5  # Show alert for 5 seconds
+
+# Display Settings
+display:
+  show_video: true
+  show_fps: true
+  bbox_color_recognized: [0, 255, 0]  # Green for recognized
+  bbox_color_unknown: [0, 0, 255]  # Red for unknown/tailgating
+  bbox_thickness: 2
+  font_scale: 0.6
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  log_file: "logs/system.log"
+
+# Performance
+performance:
+  max_faces_per_frame: 10
+  max_persons_per_frame: 15
+  enable_tensorrt: false  # Set true after TensorRT optimization

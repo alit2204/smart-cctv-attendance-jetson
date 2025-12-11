@@ -1,0 +1,27 @@
+# Smart CCTV Attendance System - Dependencies
+
+# Core ML/CV Libraries
+opencv-python==4.8.1.78
+numpy==1.23.5
+pandas==1.5.3
+scipy==1.10.1
+
+# Deep Learning
+torch==1.13.1
+torchvision==0.14.1
+onnx==1.14.1
+onnxruntime==1.16.0  # Use onnxruntime-gpu for GPU support
+
+# Web Interface
+gradio==4.7.1
+
+# Configuration & Utilities
+pyyaml==6.0.1
+pillow==10.1.0
+
+# Optional: TensorRT (for Jetson Nano optimization)
+# Install manually on Jetson: Already included in JetPack 4.6
+
+# Optional: For better performance
+# tqdm==4.66.1  # Progress bars
+# colorlog==6.8.0  # Colored logging
