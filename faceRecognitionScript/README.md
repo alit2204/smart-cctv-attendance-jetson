@@ -1,5 +1,5 @@
 # 📘 Face Recognition Attendance System – Jetson Nano
-*A real-time face recognition system using OpenCV, LBPH, Jetson Nano, and Google Sheets for attendance logging.*
+*A real-time face recognition system using OpenCV, Mobile Net, Jetson Nano, and Google Sheets for attendance logging.*
 
 ---
 
@@ -10,7 +10,7 @@ The system uses:
 
 - **Jetson Nano**
 - **USB Camera**
-- **OpenCV + LBPH Recognizer**
+- **OpenCV + Mobile Net Recognizer**
 - **GStreamer**
 - **Google Sheets API**
 
@@ -46,7 +46,7 @@ This guide covers:
 ```
 project/
 │── faces/                      # Face dataset folders
-│── face_model.yml              # Trained LBPH model
+│── face_model.npy              # Trained Mobile Net model
 │── facdec_recognitionScript.py # Main attendance system script
 │── capture_loop.py             # Optional: image collection script for dataset
 │── facedetectionattendece-e013eda423c6_googleSheetAccesskey.json # Service account key (DO NOT UPLOAD TO GITHUB)
@@ -63,7 +63,7 @@ This project includes (or recommends using) a **camera capture loop script** tha
 ✔ Saves it automatically in a folder  
 ✔ Helps build high-quality datasets for each person  
 ✔ Great for collecting **10–50 training images** per subject  
-✔ Improves accuracy of the LBPH model  
+✔ Improves accuracy of the Mobile Net model  
 
 Typical dataset structure:
 
@@ -84,12 +84,12 @@ Run the capture script → look at the camera → images are saved automatically
 Uses OpenCV Haarcascade (`haarcascade_frontalface_default.xml`) to locate faces in each frame.
 
 ## 2. Face Recognition
-Uses **LBPH Recognizer** because it is:
+Uses **Mobile Net Recognizer** because it is:
 
 - Fast
 - Lightweight
 - Works well on Jetson Nano
-- Does not need GPU
+- Utilizes GPU for accelerated performance
 
 ## 3. Attendance Logging
 When a face is recognized:
@@ -167,11 +167,11 @@ faces/John
 
 Use the **camera capture loop script** to automatically collect images.
 
-## 7️⃣ Train LBPH Face Model
+## 7️⃣ Train Mobile Net Face Model
 The training script will generate:
 
 ```
-face_model.yml
+face_model.npy
 ```
 
 Place it in the project folder.
