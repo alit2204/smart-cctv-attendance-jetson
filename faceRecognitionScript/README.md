@@ -6,6 +6,10 @@
 
 ## ⚠️ CRITICAL: PRE-REQUISITE STEP
 
+**After flashing Jetson nano**, you must install the required libraries, packages and Linux tools.
+
+👉 **[Install Required Libraries and Tools Here](https://docs.google.com/document/d/1pjvb5xHp7uPkiiE9mQ_X6I_RjF071LiR7rjuKqJBzgo/edit?usp=drive_link)**
+
 **Before running any code**, you must download the required model weights, engines, and configuration files.
 
 👉 **[Download Project Dependencies Here](https://drive.google.com/drive/folders/1Xfy9o1Z_QP_hlToJZ2dnD5TEpQB8zFUH?usp=drive_link)**
