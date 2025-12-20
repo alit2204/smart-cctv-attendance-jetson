@@ -8,7 +8,7 @@
 
 **Before running any code**, you must download the required model weights, engines, and configuration files.
 
-👉 **[Download Project Dependencies Here](https://www.google.com/search?q=ProjectDependencies.url)**
+👉 **[Download Project Dependencies Here](https://drive.google.com/drive/folders/1Xfy9o1Z_QP_hlToJZ2dnD5TEpQB8zFUH?usp=drive_link)**
 
 *Ensure all downloaded files (e.g., `.caffemodel`, `.prototxt`, `.onnx`, and `.engine`) are placed directly in the root directory as shown in the Project Structure below.*
 
