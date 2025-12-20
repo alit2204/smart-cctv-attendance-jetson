@@ -97,6 +97,8 @@ After adding new photos, you must re-generate the facial signatures:
 1. Run: `python3 enroll_faces.py`
 2. This updates `encodings.pickle` so the system recognizes the new person.
 
+Note: imageCaptureLoopScript.py can be used to automatically creating folders and taking pictures
+
 ---
 
 ## ▶️ Running the System
